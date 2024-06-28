@@ -6,7 +6,7 @@ import logging
 from datetime import datetime
 
 # Obtenez le token API depuis les variables d'environnement
-API_TOKEN = os.getenv('7499675140:AAHcCTCsEzKDZvofjWoQAbnGS_4u8a7k340')
+API_TOKEN = '7499675140:AAHcCTCsEzKDZvofjWoQAbnGS_4u8a7k340'
 
 # Configurer le logger
 date_str = datetime.now().strftime('%Y-%m-%d')
@@ -16,7 +16,7 @@ bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Bienvenue au jeu de lancer de dés ! Tapez /play pour commencer à jouer.")
+    bot.reply_to(message, "Bienvenue au jeu de lancer de dés de Cyd (WhatsApp : 620621375) ! Tapez /play pour commencer à jouer.")
     logging.info(f"Utilisateur {message.from_user.username} a démarré le bot.")
 
 @bot.message_handler(commands=['play'])
